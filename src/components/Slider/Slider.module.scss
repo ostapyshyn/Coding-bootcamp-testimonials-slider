@@ -1,0 +1,14 @@
+.slider {
+  display: flex;
+  align-items: center;
+  .testimonial {
+    font-family: 'Inter';
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 44px;
+    color: #202047;
+    max-width: 635px;
+    transform: translateX(64px);
+    margin-left: -64px;
+  }
+}
