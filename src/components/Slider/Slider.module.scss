@@ -1,6 +1,38 @@
 .slider {
   display: flex;
   align-items: center;
+
+  figure {
+    position: relative;
+    .buttons {
+      position: absolute;
+      left: 60px;
+      bottom: -30px;
+      background: #ffffff;
+      box-shadow: 0px 15px 20px -10px rgba(36, 36, 113, 0.0991313);
+      border-radius: 28px;
+      width: 112px;
+      height: 56px;
+      display: flex;
+      justify-content: center;
+      // gap: 48px;
+      .lbutton,
+      .rbutton {
+        background: transparent;
+        width: 100%;
+        cursor: pointer;
+        flex-basis: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:active {
+          transform: scale(0.9);
+          // transform: translate(1px, 1px);
+        }
+      }
+    }
+  }
+
   .testimonial {
     font-family: 'Inter';
     font-weight: 300;
@@ -10,5 +42,21 @@
     max-width: 635px;
     transform: translateX(64px);
     margin-left: -64px;
+    margin-bottom: 32px;
+    position: relative;
+    z-index: 99;
+  }
+  .title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 38px;
+    color: #202047;
+    span {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 38px;
+      color: #b9b9ce;
+      margin-left: 5px;
+    }
   }
 }

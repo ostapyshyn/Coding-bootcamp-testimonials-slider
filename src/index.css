@@ -43,6 +43,10 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
+
+  background-image: url(assets/pattern-curve.svg), url(assets/svg/bg-pattern-bottom-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: bottom left;
 }
 
 @mixin mq($size) {

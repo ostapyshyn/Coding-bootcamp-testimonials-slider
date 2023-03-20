@@ -1,19 +1,31 @@
 import React from 'react'
 import styles from './Slider.module.scss'
-import user from '../../assets/image-tanya.jpg'
+import { testimonials } from '../../data.js'
+import left_arrow from '../../assets/icon-prev.svg'
+import right_arrow from '../../assets/icon-next.svg'
 
 const Slider = () => {
   return (
     <main>
       <section>
         <div className={styles.slider}>
-          <p className={styles.testimonial}>
-            “ I’ve been interested in coding for a while but never taken the jump, until now. I
-            couldn’t recommend this course enough. I’m now in the job of my dreams and so excited
-            about the future. ”
-          </p>
+          <div>
+            <p className={styles.testimonial}>{testimonials[0].text}</p>
+            <p className={styles.title}>
+              {testimonials[0].title} <span>{testimonials[0].subTitle}</span>
+            </p>
+          </div>
+
           <figure>
-            <img src={user} alt="user" />
+            <img src={testimonials[0].img} alt="user" />
+            <div className={styles.buttons}>
+              <button className={styles.lbutton}>
+                <img src={left_arrow} alt="arrow" />
+              </button>
+              <button className={styles.rbutton}>
+                <img src={right_arrow} alt="arrow" />
+              </button>
+            </div>
           </figure>
         </div>
       </section>
