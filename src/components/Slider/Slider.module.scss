@@ -1,8 +1,13 @@
+@import '../../index.scss';
 .slider {
   display: flex;
   align-items: center;
   justify-content: center;
   transform: translateX(-23px);
+  @include mq(1024px) {
+    flex-direction: column;
+    transform: translateX(0px);
+  }
   .left {
     position: relative;
     transform: translate(129px, 48px);
@@ -10,6 +15,9 @@
     flex-basis: 47.5%;
     width: 100%;
     z-index: 1;
+    @include mq(1024px) {
+      transform: translate(0px, 0px);
+    }
     .quotes {
       position: absolute;
       left: 96px;
@@ -28,6 +36,13 @@
   }
 
   .figure {
+    @include mq(1024px) {
+      order: -1;
+      padding-left: 40px;
+      padding-top: 31px;
+      padding-bottom: 54px;
+      padding-right: 36px;
+    }
     padding-left: 66px;
     padding-top: 68px;
     padding-bottom: 49px;
