@@ -1,9 +1,27 @@
 .slider {
   display: flex;
   align-items: center;
-
-  figure {
+  .left {
     position: relative;
+    transform: translateY(41px);
+    z-index: 1;
+    .quotes {
+      position: absolute;
+      left: 94px;
+      bottom: 255px;
+    }
+  }
+
+  .figure {
+    position: relative;
+    .bg {
+      position: absolute;
+      max-width: none;
+      z-index: -1;
+      right: -87px;
+      bottom: -51px;
+    }
+
     .buttons {
       position: absolute;
       left: 60px;

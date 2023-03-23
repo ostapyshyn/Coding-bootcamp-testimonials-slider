@@ -1,32 +1,45 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './Slider.module.scss'
-import { testimonials } from '../../data.js'
+import { items } from '../../data.js'
 import left_arrow from '../../assets/icon-prev.svg'
 import right_arrow from '../../assets/icon-next.svg'
+import background from '../../assets/pattern-bg.svg'
+import quotes from '../../assets/pattern-quotes.svg'
 
 const Slider = () => {
+  const [currentItem, setCurrentItem] = useState(0)
+
+  const nextItem = () => {
+    setCurrentItem((currentItem + 1) % items.length)
+  }
+
+  const prevItem = () => {
+    setCurrentItem((currentItem + items.length - 1) % items.length)
+  }
   return (
     <main>
       <section>
         <div className={styles.slider}>
-          <div>
-            <p className={styles.testimonial}>{testimonials[0].text}</p>
+          <div className={styles.left}>
+            <img src={quotes} alt="quotes" className={styles.quotes} />
+            <p className={styles.testimonial}>{items[currentItem].text}</p>
             <p className={styles.title}>
-              {testimonials[0].title} <span>{testimonials[0].subTitle}</span>
+              {items[currentItem].title} <span>{items[currentItem].subTitle}</span>
             </p>
           </div>
 
-          <figure>
-            <img src={testimonials[0].img} alt="user" />
+          <div className={styles.figure}>
+            <img src={background} alt="bg" className={styles.bg} />
+            <img src={items[currentItem].img} alt="user" />
             <div className={styles.buttons}>
-              <button className={styles.lbutton}>
+              <button className={styles.lbutton} onClick={prevItem}>
                 <img src={left_arrow} alt="arrow" />
               </button>
-              <button className={styles.rbutton}>
+              <button className={styles.rbutton} onClick={nextItem}>
                 <img src={right_arrow} alt="arrow" />
               </button>
             </div>
-          </figure>
+          </div>
         </div>
       </section>
     </main>

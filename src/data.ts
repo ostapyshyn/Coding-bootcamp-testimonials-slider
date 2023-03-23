@@ -1,7 +1,7 @@
 import tanya from './assets/image-tanya.jpg'
 import john from './assets/image-john.jpg'
 
-export const testimonials = [
+export const items = [
   {
     id: 1,
     img: tanya,
