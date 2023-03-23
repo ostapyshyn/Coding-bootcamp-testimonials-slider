@@ -42,6 +42,7 @@ h6 {
 body {
   margin: 0;
   padding: 0;
+  padding-inline: 20px;
   min-height: 100vh;
 
   background-image: url(assets/pattern-curve.svg), url(assets/svg/bg-pattern-bottom-desktop.svg);

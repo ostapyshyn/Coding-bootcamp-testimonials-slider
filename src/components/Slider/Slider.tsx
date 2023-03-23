@@ -29,8 +29,8 @@ const Slider = () => {
           </div>
 
           <div className={styles.figure}>
-            <img src={background} alt="bg" className={styles.bg} />
-            <img src={items[currentItem].img} alt="user" />
+            {/* <img src={background} alt="bg" className={styles.bg} /> */}
+            <img src={items[currentItem].img} alt="user" className={styles.user} />
             <div className={styles.buttons}>
               <button className={styles.lbutton} onClick={prevItem}>
                 <img src={left_arrow} alt="arrow" />
