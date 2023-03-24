@@ -22,6 +22,15 @@
       position: absolute;
       left: 96px;
       bottom: 257px;
+      @include mq(1024px) {
+        font-size: 18px;
+        line-height: 24px;
+        width: 60px;
+        height: 50px;
+        left: 50%;
+        top: -26px;
+        transform: translateX(-50%);
+      }
     }
     .testimonial {
       font-family: 'Inter';
@@ -32,6 +41,12 @@
 
       margin-bottom: 32px;
       z-index: 99;
+      @include mq(1024px) {
+        font-size: 18px;
+        line-height: 24px;
+        text-align: center;
+        margin-bottom: 18px;
+      }
     }
   }
 
@@ -42,6 +57,7 @@
       padding-top: 31px;
       padding-bottom: 54px;
       padding-right: 36px;
+      margin-bottom: 30px;
     }
     padding-left: 66px;
     padding-top: 68px;
@@ -85,7 +101,13 @@
       display: flex;
       justify-content: center;
       // gap: 48px;
-
+      @include mq(1024px) {
+        width: 80px;
+        height: 40px;
+        bottom: 33px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
       .lbutton,
       .rbutton {
         background: transparent;
@@ -102,18 +124,37 @@
       }
     }
   }
-
-  .title {
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 38px;
-    color: #202047;
-    span {
+  .position {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    @include mq(1024px) {
+      flex-direction: column;
+      justify-content: center;
+      gap: 0px;
+    }
+    .title {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 38px;
+      color: #202047;
+      @include mq(1024px) {
+        font-size: 15px;
+        line-height: 20px;
+        text-align: center;
+      }
+    }
+    .subTitle {
       font-weight: 500;
       font-size: 20px;
       line-height: 38px;
       color: #b9b9ce;
       margin-left: 5px;
+      @include mq(1024px) {
+        font-size: 15px;
+        line-height: 20px;
+        text-align: center;
+      }
     }
   }
 }

@@ -23,9 +23,10 @@ const Slider = () => {
           <div className={styles.left}>
             <img src={quotes} alt="quotes" className={styles.quotes} />
             <p className={styles.testimonial}>{items[currentItem].text}</p>
-            <p className={styles.title}>
-              {items[currentItem].title} <span>{items[currentItem].subTitle}</span>
-            </p>
+            <div className={styles.position}>
+              <p className={styles.title}>{items[currentItem].title}</p>
+              <p className={styles.subTitle}>{items[currentItem].subTitle}</p>
+            </div>
           </div>
 
           <div className={styles.figure}>

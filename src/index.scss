@@ -38,21 +38,27 @@ h5,
 h6 {
   overflow-wrap: break-word;
 }
+@mixin mq($size) {
+  @media screen and (max-width: $size) {
+    @content;
+  }
+}
 
 body {
   margin: 0;
   padding: 0;
-  padding-inline: 20px;
+
+  padding-inline: 24px;
   min-height: 100vh;
 
   background-image: url(assets/pattern-curve.svg);
   background-repeat: no-repeat;
   background-position: bottom left;
-}
 
-@mixin mq($size) {
-  @media screen and (max-width: $size) {
-    @content;
+  @include mq(1024px) {
+    padding-top: 24px;
+    padding-bottom: 75px;
+    background-position: bottom -82px left;
   }
 }
 
