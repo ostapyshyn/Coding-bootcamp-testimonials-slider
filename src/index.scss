@@ -58,7 +58,8 @@ body {
   @include mq(1024px) {
     padding-top: 24px;
     padding-bottom: 75px;
-    background-position: bottom -82px left;
+    // background-position: bottom -82px left;
+    background-size: 80%;
   }
 }
 

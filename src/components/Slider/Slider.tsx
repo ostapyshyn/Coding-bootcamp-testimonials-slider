@@ -34,10 +34,10 @@ const Slider = () => {
             <img src={items[currentItem].img} alt="user" className={styles.user} />
             <div className={styles.buttons}>
               <button className={styles.lbutton} onClick={prevItem}>
-                <img src={left_arrow} alt="arrow" />
+                <img src={left_arrow} alt="arrow" className={styles.arrows} />
               </button>
               <button className={styles.rbutton} onClick={nextItem}>
-                <img src={right_arrow} alt="arrow" />
+                <img src={right_arrow} alt="arrow" className={styles.arrows} />
               </button>
             </div>
           </div>

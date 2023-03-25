@@ -121,6 +121,11 @@
           transform: scale(0.9);
           // transform: translate(1px, 1px);
         }
+        .arrows {
+          @include mq(1024px) {
+            height: 0.8rem;
+          }
+        }
       }
     }
   }
